@@ -1,6 +1,6 @@
 // Widths and heights
 export const HEADER_HEIGHT = 72
-export const FOOTER_HEIGHT = 36
+export const FOOTER_HEIGHT = 70
 
 // For thing like setTimeout
 export const SECOND_IN_MS = 1000
