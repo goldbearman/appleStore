@@ -3,7 +3,7 @@ import {Route, Navigate, Routes, useLocation} from "react-router-dom"
 import {checkPathMatch, paths} from "./helpers"
 
 const HomePage = lazy(()=>import("pages/HomePage") )
-const ProductDetailsPage = lazy(()=>import("pages/ProductDetailsPage") )
+const ProductDetailsPage = lazy(()=>import("pages/ProductDetailsPage/ProductDetailsPage") )
 
 const PublicRoutes: React.FC = () => {
 

@@ -2,7 +2,7 @@ import { useCallback, useMemo } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 // import { useAppDispatch } from 'store'
-// import Button from 'components/Button'
+import Button from 'components/Button'
 import { paths } from 'routes/helpers'
 // import { addToFavorites, removeFromFavorites } from 'features/Favorites/reducer'
 import { ReactComponent as HeartEmpty } from 'img/heart-empty.svg'
