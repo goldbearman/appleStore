@@ -8,7 +8,7 @@ import reducers from './reducers'
 //     favorites,
 // })
 
-const store = configureStore({ reducer })
+const store = configureStore({ reducer:reducers })
 
 export default store
 

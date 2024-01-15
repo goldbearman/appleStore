@@ -1,6 +1,6 @@
 import styled, { createGlobalStyle } from 'styled-components'
 
-import { HEADER_HEIGHT, FOOTER_HEIGHT } from 'consts/index.ts'
+import { HEADER_HEIGHT, FOOTER_HEIGHT } from 'consts'
 import colors from 'consts/colors'
 
 
