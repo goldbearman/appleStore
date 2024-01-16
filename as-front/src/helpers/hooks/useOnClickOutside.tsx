@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 
 
 // Do something on click outside element
-export const useOnClickOutside = (ref: any, handler: any) => {
+const useOnClickOutside = (ref: any, handler: any) => {
     useEffect(
         () => {
             const listener = (e: any) => {

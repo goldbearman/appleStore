@@ -1,6 +1,6 @@
 import { useState, useCallback, useRef } from 'react'
 
-import { useOnClickOutside } from 'helpers/hooks'
+import useOnClickOutside from "../../helpers/hooks";
 import { Wrapper, DropdownWrapper } from './styled'
 
 
