@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components/macro'
 
 import { HEADER_HEIGHT, FOOTER_HEIGHT } from 'consts'
 import colors from 'consts/colors'
