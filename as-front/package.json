@@ -47,21 +47,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "@babel/preset-typescript": "^7.23.3",
-    "babel-plugin-styled-components": "^2.1.4"
-  },
-  "babel": {
-    "presets": [
-      "react-app"
-    ],
-    "plugins": [
-      [
-        "babel-plugin-styled-components",
-        {
-          "displayName": false
-        }
-      ]
-    ]
-  }
+  "devDependencies": {}
 }
