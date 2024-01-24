@@ -17,7 +17,7 @@ const HomePage: React.FC = () => {
                     <h2>Рекомендуемые товары</h2>
 
                     <ProductGroupContainer>
-                        {dummyProducts.map(p=> <ProductCard {...p} key={p.id}/>)}
+                        {dummyProducts.map(p=> <ProductCard isLiked={true} {...p} key={p.id}/>)}
 
                     </ProductGroupContainer>
 

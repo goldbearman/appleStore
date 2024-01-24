@@ -29,7 +29,7 @@ interface I_ProductCardProps {
     priceDiscounted?: number
     title: string
     desc: string
-    // isLiked: boolean
+    isLiked: boolean
     hideLikes?: boolean
 }
 
@@ -42,7 +42,7 @@ const ProductCard: React.FC<I_ProductCardProps> = ({
                                                        priceDiscounted,
                                                        title,
                                                        desc,
-                                                       // isLiked,
+                                                       isLiked,
                                                        hideLikes = false,
                                                    }) => {
     // const dispatch = useAppDispatch()
@@ -77,10 +77,13 @@ const ProductCard: React.FC<I_ProductCardProps> = ({
             {!hideLikes && (
                 <LikeWrapper
                     data-product-id={id}
+
+
+
                     // onClick={handleFavorites}
                 >
-                    {/*{isLiked ? <HeartFilled /> : <HeartEmpty />}*/}
-                    <HeartEmpty/>
+                    {isLiked ? <HeartFilled /> : <HeartEmpty />}
+                    {/*<HeartEmpty/>*/}
                 </LikeWrapper>
             )}
 
