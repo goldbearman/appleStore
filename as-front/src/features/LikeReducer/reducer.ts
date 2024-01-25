@@ -4,24 +4,34 @@ import type { AnyAction } from '@reduxjs/toolkit'
 import type { I_LikeReducer } from './types'
 
 
-const initialState: I_LikeReducer = {
-    isLike:false
+const initialState: I_LikeReducer  = {
+    isLikeArr:[]
 }
 
 
-const setLikeReducerAction = createAction<I_LikeReducer>('USER_DATA/set')
+const setLikeReducerAction = createAction<I_LikeReducer>('LIKE')
 
 const LikeReducer = createReducer(initialState, (builder) => {
     builder.addCase(
         setLikeReducerAction,
-        (_, action) => action.payload
+        (state, action) => {
+
+            action.payload
+            state.isLikeArr =  state.isLikeArr.filter(el => {
+
+            })
+        }
     )
 })
 
 
-export const setLikeReducer = (userData: I_LikeReducer): AnyAction => (
-    setLikeReducerAction(userData)
+export const setLikeReducer = (likeData: I_LikeReducer): AnyAction => (
+    setLikeReducerAction(likeData)
 )
 
 
 export default LikeReducer
+
+function compareArr(el){
+
+}

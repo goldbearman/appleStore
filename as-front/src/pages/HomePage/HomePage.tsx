@@ -6,6 +6,9 @@ import {dummyProducts} from "../ProductDetailsPage/dummyProducts";
 import ProductCard from "../../blocks/ProductCard";
 
 const HomePage: React.FC = () => {
+
+
+
     return (
         <>
             <Helmet>
