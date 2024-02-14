@@ -18,10 +18,12 @@ import Button from "../../components/Button";
 import {paths} from "../../routes/helpers";
 import logoPng from 'img/logo.png'
 import UserDropdownMenu from "./UserDropdownMenu";
+import {selectIsLikeArr} from "../LikeReducer/selectors";
 
 const Header:React.FC = () => {
 
     const isLogged = useSelector(selectIsLogged)
+    const {isLikeArr}  = useSelector(selectIsLikeArr)
 
     const [ searchInput, setSearchInput ] = useState<string>('')
 
@@ -59,7 +61,7 @@ const Header:React.FC = () => {
          <RightSide>
              {isLogged ? <>
                  <BtnOrders count={5} />
-                 <BtnFavorites count={5} />
+                 <BtnFavorites count={isLikeArr.length} />
                  <BtnNotifications count={5} />
                  <BtnCart count={5}/>
                  <UserDropdownMenu/>

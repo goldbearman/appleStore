@@ -1,12 +1,12 @@
-import { useCallback, useMemo } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import {useCallback, useMemo} from 'react'
+import {Link, useLocation} from 'react-router-dom'
 
 // import { useAppDispatch } from 'store'
 import Button from 'components/Button'
-import { paths } from 'routes/helpers'
+import {paths} from 'routes/helpers'
 // import { addToFavorites, removeFromFavorites } from 'features/Favorites/reducer'
-import { ReactComponent as HeartEmpty } from 'img/heart-empty.svg'
-import { ReactComponent as HeartFilled } from 'img/heart-filled.svg'
+import {ReactComponent as HeartEmpty} from 'img/heart-empty.svg'
+import {ReactComponent as HeartFilled} from 'img/heart-filled.svg'
 import {
     Wrapper,
     LikeWrapper,
@@ -19,6 +19,9 @@ import {
     Desc,
     BtnsWrapper,
 } from './styled'
+import {setLikeReducer} from "../../features/LikeReducer/reducer";
+import {useDispatch} from "react-redux";
+import {UnknownAction} from "@reduxjs/toolkit";
 
 
 interface I_ProductCardProps {
@@ -45,7 +48,7 @@ const ProductCard: React.FC<I_ProductCardProps> = ({
                                                        isLiked,
                                                        hideLikes = false,
                                                    }) => {
-    // const dispatch = useAppDispatch()
+    const dispatch = useDispatch()
     // const location = useLocation()
     //
     // const handleFavorites = useCallback((e: React.MouseEvent<HTMLElement>) => {
@@ -58,6 +61,15 @@ const ProductCard: React.FC<I_ProductCardProps> = ({
     //     )
     // }, [ dispatch, isLiked ])
     //
+    const hadleLike = (e: React.MouseEvent<HTMLDivElement>) => {
+        // const {productId} = e.currentTarget.dataset
+        console.log(id);
+        if (id) {
+            dispatch(setLikeReducer(+id));
+        }
+    }
+
+
     // const isFavoritesPage = useMemo(
     //     () => location.pathname === paths.favorites,
     //     [ location.pathname ]
@@ -79,10 +91,10 @@ const ProductCard: React.FC<I_ProductCardProps> = ({
                     data-product-id={id}
 
 
-
                     // onClick={handleFavorites}
+                    onClick={hadleLike}
                 >
-                    {isLiked ? <HeartFilled /> : <HeartEmpty />}
+                    {isLiked ? <HeartFilled/> : <HeartEmpty/>}
                     {/*<HeartEmpty/>*/}
                 </LikeWrapper>
             )}

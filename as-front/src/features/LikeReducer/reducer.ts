@@ -3,13 +3,15 @@ import type { AnyAction } from '@reduxjs/toolkit'
 
 import type { I_LikeReducer,I_SetLikePayload } from './types'
 
+export type LikeAction = ReturnType<typeof setLikeReducerAction>;
+
 const initialState: I_LikeReducer  = {
     isLikeArr:[]
 }
 
 const setLikeReducerAction = createAction<number>('LIKE')
 
-const LikeReducer = createReducer(initialState, (builder) => {
+const likeReducer = createReducer(initialState, (builder) => {
     builder.addCase(
         setLikeReducerAction,
         (state, action: PayloadAction<number>) => {
@@ -24,9 +26,9 @@ const LikeReducer = createReducer(initialState, (builder) => {
     );
 });
 
-export const setLikeReducer = (likeData: number): AnyAction => (
+export const setLikeReducer = (likeData: number): LikeAction => (
     setLikeReducerAction(likeData)
 )
 
-export default LikeReducer
+export default likeReducer
 
